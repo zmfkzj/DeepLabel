@@ -1,0 +1,26 @@
+version: "3.3"
+
+services:
+  cvat:
+    build:
+      args:
+        TZ: "Asia/Seoul"
+#    environment:
+#      CVAT_SHARE_URL: "/home/tm/nasrw/NIA_데이터"
+#    volumes:
+#      - cvat_share:/home/django/share:ro
+
+  cvat_proxy:
+    environment:
+      #CVAT_HOST: 192.168.0.128
+      #CVAT_HOST: 192.168.1.21
+      #CVAT_HOST: tmlabel.duckdns.org
+      #CVAT_HOST: '*'
+      CVAT_HOST: tmecnc62.iptime.org
+
+#volumes:
+#  cvat_share:
+#    driver_opts:
+#      type: none
+#      device: /home/tm/nasrw/NIA_데이터
+#      o: bind

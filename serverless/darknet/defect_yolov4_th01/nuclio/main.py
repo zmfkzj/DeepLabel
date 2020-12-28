@@ -19,6 +19,6 @@ def handler(context, event):
     data = event.body
     image_path = io.BytesIO(base64.b64decode(data["image"].encode('utf-8')))
 
-    results = context.user_data.detector(image_path, 0.01)
+    results = context.user_data.detector(image_path, 0.005)
     return context.Response(body=json.dumps(results, ensure_ascii=False), headers={},
         content_type='application/json', status_code=200)

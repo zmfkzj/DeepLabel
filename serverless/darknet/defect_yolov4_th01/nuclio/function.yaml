@@ -2,7 +2,7 @@ metadata:
   name: defect_yolov4_th01
   namespace: cvat
   annotations:
-    name: YOLOv4 defect detector 01
+    name: YOLOv4 defect detector 005
     type: detector
     framework: darknet
     spec: |
@@ -33,7 +33,7 @@ metadata:
       ]
 
 spec:
-  description: yolov4 defect detector threshold 0.01
+  description: yolov4 defect detector threshold 0.005
   runtime: 'python:3.7'
   handler: main:handler
   eventTimeout: 30s
