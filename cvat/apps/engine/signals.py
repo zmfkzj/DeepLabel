@@ -25,6 +25,8 @@ def update_task_status(instance, **kwargs):
         status = StatusChoice.ANNOTATION
     elif list(filter(lambda x: x.status == StatusChoice.VALIDATION, db_jobs)):
         status = StatusChoice.VALIDATION
+    elif list(filter(lambda x: x.status == StatusChoice.MODIFICATION, db_jobs)):
+        status = StatusChoice.MODIFICATION
 
     if status != db_task.status:
         db_task.status = status

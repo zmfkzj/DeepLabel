@@ -22,6 +22,7 @@ class SafeCharField(models.CharField):
 class StatusChoice(str, Enum):
     ANNOTATION = 'annotation'
     VALIDATION = 'validation'
+    MODIFICATION = 'modification'
     COMPLETED = 'completed'
 
     @classmethod

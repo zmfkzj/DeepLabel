@@ -12,10 +12,6 @@ services:
 
   cvat_proxy:
     environment:
-      #CVAT_HOST: 192.168.0.128
-      #CVAT_HOST: 192.168.1.21
-      #CVAT_HOST: tmlabel.duckdns.org
-      #CVAT_HOST: '*'
       CVAT_HOST: tmecnc62.iptime.org
 
 #volumes:

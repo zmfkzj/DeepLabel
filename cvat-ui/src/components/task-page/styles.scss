@@ -119,6 +119,7 @@
 .cvat-job-item-status {
     .cvat-job-annotation-color,
     .cvat-job-validation-color,
+    .cvat-job-modificatino-color,
     .cvat-job-completed-color {
         span {
             margin-left: $grid-unit-size;
@@ -150,4 +151,8 @@
 
 .cvat-job-annotation-color {
     color: $pending-progress-color;
+}
+
+.cvat-job-modification-color {
+    color: $modifing-progress-color;
 }

@@ -24,12 +24,14 @@
      * @memberof module:API.cvat.enums
      * @property {string} ANNOTATION 'annotation'
      * @property {string} VALIDATION 'validation'
+     * @property {string} MODIFICATION 'modification'
      * @property {string} COMPLETED 'completed'
      * @readonly
      */
     const TaskStatus = Object.freeze({
         ANNOTATION: 'annotation',
         VALIDATION: 'validation',
+        MODIFICATION: 'modification',
         COMPLETED: 'completed',
     });
 
