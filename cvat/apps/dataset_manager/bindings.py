@@ -115,8 +115,9 @@ class TaskData:
 
     def _init_frame_info(self):
         if hasattr(self._db_task.data, 'video'):
+            ext = FrameProvider.VIDEO_FRAME_EXT
             self._frame_info = {frame: {
-                "path": "{}_{}_{:06d}".format(self._db_task.id ,self._db_task, self.abs_frame_id(frame)),
+                "path": "{}_{}_{:06d}{}".format(self._db_task.id ,self._db_task, self.abs_frame_id(frame), ext),
                 "width": self._db_task.data.video.width,
                 "height": self._db_task.data.video.height,
             } for frame in range(self._db_task.data.size)}
@@ -481,7 +482,7 @@ class CvatTaskDataExtractor(datumaro.SourceExtractor):
 
         for frame_data in task_data.group_by_frame(include_empty=True):
             image_args = {
-                'path': frame_data.name + ext,
+                'path': frame_data.name,
                 'size': (frame_data.height, frame_data.width),
             }
             if include_images:
