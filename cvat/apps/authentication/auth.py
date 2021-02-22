@@ -138,7 +138,7 @@ def has_change_permissions(db_user, db_job):
     # A job can be annotated by any user if the task's assignee is None.
     has_rights = (db_task.assignee is None and not settings.RESTRICTIONS['reduce_task_visibility']) or is_task_assignee(db_user, db_task)
     if db_job.assignee is not None:
-        has_rights |= (db_user == db_job.assignee) and (db_job.status == 'annotation')
+        has_rights |= (db_user == db_job.assignee) and ((db_job.status == 'annotation') or (db_job.status == 'modification'))
     if db_job.reviewer is not None:
         has_rights |= (db_user == db_job.reviewer) and (db_job.status == 'validation')
 

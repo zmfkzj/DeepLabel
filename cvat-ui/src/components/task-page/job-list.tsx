@@ -139,6 +139,8 @@ function JobListComponent(props: Props & RouteComponentProps): JSX.Element {
                     progressColor = 'cvat-job-completed-color';
                 } else if (status === 'validation') {
                     progressColor = 'cvat-job-validation-color';
+                } else if (status === 'modification') {
+                    progressColor = 'cvat-job-modification-color';
                 } else {
                     progressColor = 'cvat-job-annotation-color';
                 }

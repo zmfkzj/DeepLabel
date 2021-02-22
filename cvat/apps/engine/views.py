@@ -318,7 +318,7 @@ class DjangoFilterInspector(CoreAPICompatInspector):
             openapi.Parameter('name', openapi.IN_QUERY, description="Find all tasks where name contains a parameter value", type=openapi.TYPE_STRING),
             openapi.Parameter('owner', openapi.IN_QUERY, description="Find all tasks where owner name contains a parameter value", type=openapi.TYPE_STRING),
             openapi.Parameter('mode', openapi.IN_QUERY, description="Find all tasks with a specific mode", type=openapi.TYPE_STRING, enum=['annotation', 'interpolation']),
-            openapi.Parameter('status', openapi.IN_QUERY, description="Find all tasks with a specific status", type=openapi.TYPE_STRING,enum=['annotation','validation','completed']),
+            openapi.Parameter('status', openapi.IN_QUERY, description="Find all tasks with a specific status", type=openapi.TYPE_STRING,enum=['annotation','validation', 'modification','completed']),
             openapi.Parameter('assignee', openapi.IN_QUERY, description="Find all tasks where assignee name contains a parameter value", type=openapi.TYPE_STRING)
         ],
     filter_inspectors=[DjangoFilterInspector]))
@@ -828,7 +828,7 @@ class ReviewViewSet(viewsets.GenericViewSet, mixins.DestroyModelMixin, mixins.Cr
             db_job.status = StatusChoice.COMPLETED
             db_job.save()
         elif serializer.data['status'] == ReviewStatus.REJECTED:
-            db_job.status = StatusChoice.ANNOTATION
+            db_job.status = StatusChoice.MODIFICATION
             db_job.save()
         else:
             db_job.reviewer = reviewer

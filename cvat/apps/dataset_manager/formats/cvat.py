@@ -542,7 +542,7 @@ def _export(dst_file, task_data, anno_callback, save_images=False):
                 frame_provider.Type.BUFFER)
             for frame_id, (frame_data, _) in enumerate(frames):
                 frame_name = task_data.frame_info[frame_id]['path']
-                img_path = osp.join(img_dir, frame_name + ext)
+                img_path = osp.join(img_dir, frame_name)
                 os.makedirs(osp.dirname(img_path), exist_ok=True)
                 with open(img_path, 'wb') as f:
                     f.write(frame_data.getvalue())

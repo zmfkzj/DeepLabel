@@ -73,7 +73,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='task',
             name='status',
-            field=models.CharField(choices=[('ANNOTATION', 'annotation'), ('VALIDATION', 'validation'), ('COMPLETED', 'completed')], default=cvat.apps.engine.models.StatusChoice('annotation'), max_length=32),
+            field=models.CharField(choices=[('ANNOTATION', 'annotation'), ('VALIDATION', 'validation'), ('MODIFICATION', 'modification'), ('COMPLETED', 'completed')], default=cvat.apps.engine.models.StatusChoice('annotation'), max_length=32),
         ),
         migrations.AlterField(
             model_name='task',
@@ -152,7 +152,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='job',
             name='status',
-            field=models.CharField(choices=[('ANNOTATION', 'annotation'), ('VALIDATION', 'validation'), ('COMPLETED', 'completed')], default=cvat.apps.engine.models.StatusChoice('annotation'), max_length=32),
+            field=models.CharField(choices=[('ANNOTATION', 'annotation'), ('VALIDATION', 'validation'), ('MODIFICATION', 'modification'), ('COMPLETED', 'completed')], default=cvat.apps.engine.models.StatusChoice('annotation'), max_length=32),
         ),
         migrations.AlterField(
             model_name='attributespec',
@@ -172,12 +172,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='job',
             name='status',
-            field=models.CharField(choices=[('annotation', 'ANNOTATION'), ('validation', 'VALIDATION'), ('completed', 'COMPLETED')], default=cvat.apps.engine.models.StatusChoice('annotation'), max_length=32),
+            field=models.CharField(choices=[('annotation', 'ANNOTATION'), ('validation', 'VALIDATION'), ('modification', 'MODIFICATION'), ('completed', 'COMPLETED')], default=cvat.apps.engine.models.StatusChoice('annotation'), max_length=32),
         ),
         migrations.AlterField(
             model_name='task',
             name='status',
-            field=models.CharField(choices=[('annotation', 'ANNOTATION'), ('validation', 'VALIDATION'), ('completed', 'COMPLETED')], default=cvat.apps.engine.models.StatusChoice('annotation'), max_length=32),
+            field=models.CharField(choices=[('annotation', 'ANNOTATION'), ('validation', 'VALIDATION'), ('modification', 'MODIFICATION'), ('completed', 'COMPLETED')], default=cvat.apps.engine.models.StatusChoice('annotation'), max_length=32),
         ),
         migrations.CreateModel(
             name='Image',

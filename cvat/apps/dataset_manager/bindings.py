@@ -115,8 +115,9 @@ class TaskData:
 
     def _init_frame_info(self):
         if hasattr(self._db_task.data, 'video'):
+            ext = FrameProvider.VIDEO_FRAME_EXT
             self._frame_info = {frame: {
-                "path": "frame_{:06d}".format(self.abs_frame_id(frame)),
+                "path": "{}_{}_{:06d}{}".format(self.db_task.id,self.db_task, self.abs_frame_id(frame), ext),
                 "width": self._db_task.data.video.width,
                 "height": self._db_task.data.video.height,
             } for frame in range(self._db_task.data.size)}

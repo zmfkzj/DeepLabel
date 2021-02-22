@@ -179,6 +179,7 @@ export type OpenCVTool = IntelligentScissors;
 export enum TaskStatus {
     ANNOTATION = 'annotation',
     REVIEW = 'validation',
+    MODIFY = 'modification',
     COMPLETED = 'completed',
 }
 

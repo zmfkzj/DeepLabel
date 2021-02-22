@@ -33,6 +33,7 @@ class DimensionType(str, Enum):
 class StatusChoice(str, Enum):
     ANNOTATION = 'annotation'
     VALIDATION = 'validation'
+    MODIFICATION = 'modification'
     COMPLETED = 'completed'
 
     @classmethod

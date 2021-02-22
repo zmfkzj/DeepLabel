@@ -318,7 +318,7 @@ CACHEOPS_DEGRADE_ON_FAILURE = True
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = os.getenv('TZ', 'Etc/UTC')
+TIME_ZONE = os.getenv('TZ', 'Asia/Seoul')
 
 USE_I18N = True
 
@@ -448,7 +448,7 @@ RESTRICTIONS = {
     'project_limit': None,
 
     # this setting reduse task visibility to owner and assignee only
-    'reduce_task_visibility': False,
+    'reduce_task_visibility': True,
 
     # allow access to analytics component to users with the following roles
     'analytics_access': (
