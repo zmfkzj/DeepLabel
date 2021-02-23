@@ -122,6 +122,7 @@ export default function UserSelector(props: Props): JSX.Element {
                 value: user.id.toString(),
                 label: user.username,
             }))}
+            disabled
         >
             <Input onPressEnter={() => autocompleteRef.current?.blur()} />
         </Autocomplete>

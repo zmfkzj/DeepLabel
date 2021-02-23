@@ -6,7 +6,7 @@ services:
       args:
         TZ: "Asia/Seoul"
 #    environment:
-#      CVAT_SHARE_URL: "/home/tm/nasrw/NIA_데이터"
+#      CVAT_SHARE_URL: "/home/tm/deeplabel_share"
 #    volumes:
 #      - cvat_share:/home/django/share:ro
 
@@ -18,5 +18,5 @@ services:
 #  cvat_share:
 #    driver_opts:
 #      type: none
-#      device: /home/tm/nasrw/NIA_데이터
+#      device: /home/tm/deeplabel_share
 #      o: bind

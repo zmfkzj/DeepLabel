@@ -189,7 +189,7 @@ export default function AnnotationMenuComponent(props: Props): JSX.Element {
                     Open the task
                 </a>
             </Menu.Item>
-            {jobStatus === 'annotation' || jobStatus === 'modification' && <Menu.Item key={Actions.REQUEST_REVIEW}>Request a review</Menu.Item>}
+            {(jobStatus === 'annotation' || jobStatus === 'modification') && <Menu.Item key={Actions.REQUEST_REVIEW}>Request a review</Menu.Item>}
             {/* {jobStatus === 'annotation' && <Menu.Item key={Actions.FINISH_JOB}>Finish the job</Menu.Item>} */}
             {jobStatus === 'validation' && isReviewer && (
                 <Menu.Item key={Actions.SUBMIT_REVIEW}>Submit the review</Menu.Item>
