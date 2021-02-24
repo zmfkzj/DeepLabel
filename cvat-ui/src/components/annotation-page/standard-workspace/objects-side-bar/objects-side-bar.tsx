@@ -122,13 +122,13 @@ function ObjectsSideBar(props: StateToProps & DispatchToProps & OwnProps): JSX.E
             </span>
 
             <Tabs type='card' defaultActiveKey='objects' className='cvat-objects-sidebar-tabs'>
-                <Tabs.TabPane tab={<Text strong>Objects</Text>} key='objects'>
+                <Tabs.TabPane tab={<Text strong style={{color: "#ffffff"}}>Objects</Text>} key='objects'>
                     {objectsList}
                 </Tabs.TabPane>
-                <Tabs.TabPane tab={<Text strong>Labels</Text>} key='labels'>
+                <Tabs.TabPane tab={<Text strong style={{color: "#ffffff"}}>Labels</Text>} key='labels'>
                     <LabelsListContainer />
                 </Tabs.TabPane>
-                <Tabs.TabPane tab={<Text strong>Issues</Text>} key='issues'>
+                <Tabs.TabPane tab={<Text strong style={{color: "#ffffff"}}>Issues</Text>} key='issues'>
                     <IssuesListComponent />
                 </Tabs.TabPane>
             </Tabs>

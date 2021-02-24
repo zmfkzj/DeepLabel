@@ -67,7 +67,7 @@ export default function ProjectPageComponent(): JSX.Element {
     }
 
     return (
-        <Row justify='center' align='top' className='cvat-project-page'>
+        <Row justify='center' align='top' className='cvat-project-page' style={{ height: "100%", background: "#ffffff" }}>
             <Col md={22} lg={18} xl={16} xxl={14}>
                 <ProjectTopBar projectInstance={project} />
                 <DetailsComponent project={project} />
@@ -78,6 +78,7 @@ export default function ProjectPageComponent(): JSX.Element {
                     <Col>
                         <Button
                             size='large'
+                            style={{ background: "#1446c0", borderColor: "#1446c0" }}
                             type='primary'
                             icon={<PlusOutlined />}
                             id='cvat-create-task-button'

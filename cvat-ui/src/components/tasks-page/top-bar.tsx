@@ -30,6 +30,7 @@ export default function TopBarComponent(props: VisibleTopBarProps): JSX.Element 
                 <Col md={{ span: 11 }} lg={{ span: 9 }} xl={{ span: 8 }} xxl={{ span: 7 }}>
                     <Button
                         size='large'
+                        style={{ background: "#1446c0", borderColor: "#1446c0" }}
                         id='cvat-create-task-button'
                         type='primary'
                         onClick={(): void => history.push('/tasks/create')}

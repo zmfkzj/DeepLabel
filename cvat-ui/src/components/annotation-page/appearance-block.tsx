@@ -152,7 +152,7 @@ function AppearanceBlock(props: Props): JSX.Element {
             activeKey={appearanceCollapsed ? [] : ['appearance']}
             className='cvat-objects-appearance-collapse'
         >
-            <Collapse.Panel header={<Text strong>Appearance</Text>} key='appearance'>
+            <Collapse.Panel header={<Text strong style={{color: "#ffffff"}}>Appearance</Text>} key='appearance'>
                 <div className='cvat-objects-appearance-content'>
                     <Text type='secondary'>Color by</Text>
                     <Radio.Group

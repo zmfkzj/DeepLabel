@@ -75,6 +75,7 @@ class TaskPageComponent extends React.PureComponent<Props> {
                     justify='center'
                     align='top'
                     className='cvat-task-details-wrapper'
+                     style={{ height: "100%", background: "#ffffff" }}
                 >
                     <Col md={22} lg={18} xl={16} xxl={14}>
                         <TopBarComponent taskInstance={(task as Task).instance} />

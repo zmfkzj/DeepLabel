@@ -120,7 +120,7 @@ class TaskItemComponent extends React.PureComponent<TaskItemProps & RouteCompone
                         <Progress
                             className={`${progressColor} cvat-task-progress`}
                             percent={jobsProgress * 100}
-                            strokeColor='#1890FF'
+                            strokeColor='#1446c0'
                             showInfo={false}
                             strokeWidth={5}
                             size='small'
@@ -147,6 +147,7 @@ class TaskItemComponent extends React.PureComponent<TaskItemProps & RouteCompone
                             className='cvat-item-open-task-button'
                             type='primary'
                             size='large'
+                            style={{ borderColor: "#1446c0", color: "#1446c0" }}
                             ghost
                             href={`/tasks/${id}`}
                             onClick={(e: React.MouseEvent): void => {
