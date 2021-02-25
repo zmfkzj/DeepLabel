@@ -43,7 +43,7 @@ function RegisterPageComponent(props: RegisterPageComponentProps & RouteComponen
         <>
             <Row justify='center' align='middle'>
                 <Col {...sizes}>
-                    <Title level={2}> Create an account </Title>
+                    <Title level={2}> New to DeepLabel+? Create an account </Title>
                     <RegisterForm
                         fetching={fetching}
                         userAgreements={userAgreements}
