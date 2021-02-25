@@ -50,7 +50,7 @@ function LoginPageComponent(props: LoginPageComponentProps & RouteComponentProps
                     <Row justify='start' align='top'>
                         <Col>
                             <Text strong>
-                                 Create
+                                New to DeepLabel+? Create
                                 <Link to='/auth/register' style={{color: "#1446c0"}}> an account</Link>
                             </Text>
                         </Col>
