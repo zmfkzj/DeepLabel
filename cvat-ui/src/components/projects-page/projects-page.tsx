@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useHistory } from 'react-router';
 import Spin from 'antd/lib/spin';
 
-import FeedbackComponent from 'components/feedback/feedback';
 import { CombinedState, ProjectsQuery } from 'reducers/interfaces';
 import { getProjectsAsync } from 'actions/projects-actions';
 import EmptyListComponent from './empty-list';
@@ -54,7 +53,6 @@ export default function ProjectsPageComponent(): JSX.Element {
         <div className='cvat-projects-page'>
             <TopBarComponent />
             {projectsCount ? <ProjectListComponent /> : <EmptyListComponent notFound={anySearchQuery} />}
-            <FeedbackComponent />
         </div>
     );
 }
