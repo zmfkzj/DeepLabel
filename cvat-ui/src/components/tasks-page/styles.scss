@@ -10,6 +10,7 @@
     padding-bottom: 40px;
     height: 100%;
     width: 100%;
+    background-color: white;
 
     > div:nth-child(2) {
         height: 83%;
@@ -62,6 +63,7 @@
 }
 
 .cvat-tasks-pagination {
+    color: $cvat-tasks-paginationcolor;
     display: flex;
     justify-content: center;
 }

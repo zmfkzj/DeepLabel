@@ -16,7 +16,8 @@
         > .ant-collapse-header {
             padding-top: 2.5px;
             padding-bottom: 2.5px;
-            background: $header-color;
+            background: #1446c0;    //$header-color;
+            color: #ffffff;
             border-radius: 0;
             height: 25px;
 
@@ -50,7 +51,7 @@
 }
 
 .cvat-objects-sidebar-tabs.ant-tabs.ant-tabs-card {
-    background: $header-color;
+    background: #737373;    //$header-color;
     box-sizing: border-box;
     border: none;
 

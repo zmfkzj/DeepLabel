@@ -28,6 +28,7 @@ export default function DetailsComponent(props: DetailsComponentProps): JSX.Elem
                 {taskInstance.projectId ? (
                     <Button
                         onClick={() => history.push(`/projects/${taskInstance.projectId}`)}
+                         style={{color: "#1446c0"}}
                         type='link'
                         size='large'
                     >
@@ -35,7 +36,7 @@ export default function DetailsComponent(props: DetailsComponentProps): JSX.Elem
                         Back to project
                     </Button>
                 ) : (
-                    <Button onClick={() => history.push('/tasks')} type='link' size='large'>
+                    <Button onClick={() => history.push('/tasks')} type='link' size='large' style={{color: "#1446c0"}}>
                         <LeftOutlined />
                         Back to tasks
                     </Button>

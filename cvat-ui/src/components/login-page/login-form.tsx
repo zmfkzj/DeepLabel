@@ -64,6 +64,7 @@ function LoginFormComponent(props: Props): JSX.Element {
                     disabled={fetching}
                     htmlType='submit'
                     className='login-form-button'
+                    style={{ background: "#1446c0", borderColor: "#1446c0" }}
                 >
                     Sign in
                 </Button>

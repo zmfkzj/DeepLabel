@@ -9,6 +9,8 @@ import Title from 'antd/lib/typography/Title';
 import Text from 'antd/lib/typography/Text';
 import { Row, Col } from 'antd/lib/grid';
 
+import CVATLogo from '../../assets/deeplabel-logo_3.svg';
+import DeepInspectionCI from '../../assets/deepinspection-ci.svg';
 import LoginForm, { LoginData } from './login-form';
 import CookieDrawer from './cookie-policy-drawer';
 
@@ -31,7 +33,10 @@ function LoginPageComponent(props: LoginPageComponentProps & RouteComponentProps
 
     return (
         <>
-            <Row justify='center' align='middle'>
+            <Row justify='center' align='bottom'>
+                <CVATLogo width={700} height={200} fill={"#1446c0"} />
+            </Row>
+            <Row justify='center' align='bottom' style={{height: "250px", margin: "10px"}}>
                 <Col {...sizes}>
                     <Title level={2}> Login </Title>
                     <LoginForm
@@ -40,11 +45,13 @@ function LoginPageComponent(props: LoginPageComponentProps & RouteComponentProps
                             onLogin(loginData.username, loginData.password);
                         }}
                     />
+                </Col>
+                <Col style={{padding: "10px" }}>
                     <Row justify='start' align='top'>
                         <Col>
                             <Text strong>
                                 New to CVAT? Create
-                                <Link to='/auth/register'> an account</Link>
+                                <Link to='/auth/register' style={{color: "#1446c0"}}> an account</Link>
                             </Text>
                         </Col>
                     </Row>
@@ -52,12 +59,17 @@ function LoginPageComponent(props: LoginPageComponentProps & RouteComponentProps
                         <Row justify='start' align='top'>
                             <Col>
                                 <Text strong>
-                                    <Link to='/auth/password/reset'>Forgot your password?</Link>
+                                    <Link to='/auth/password/reset' style={{color: "#1446c0"}}>Forgot your password?</Link>
                                 </Text>
                             </Col>
                         </Row>
                     )}
                 </Col>
+            </Row>
+            <Row align='bottom' style={{margin: "10px"}}>
+                <div style={{width: '100%', display: 'flex', justifyContent:'flex-end'}} className="divCI">
+                    <DeepInspectionCI />
+                </div>
             </Row>
             <CookieDrawer />
         </>

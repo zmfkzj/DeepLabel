@@ -22,6 +22,7 @@ export default function TopBarComponent(): JSX.Element {
             </Col>
             <Col md={{ span: 11 }} lg={{ span: 9 }} xl={{ span: 8 }} xxl={{ span: 7 }}>
                 <Button
+                    style={{ background: "#1446c0", borderColor: "#1446c0" }}
                     size='large'
                     id='cvat-create-project-button'
                     className='cvat-create-project-button'
@@ -29,7 +30,7 @@ export default function TopBarComponent(): JSX.Element {
                     onClick={(): void => history.push('/projects/create')}
                     icon={<PlusOutlined />}
                 >
-                    Create new project
+                    Create New Project
                 </Button>
             </Col>
         </Row>

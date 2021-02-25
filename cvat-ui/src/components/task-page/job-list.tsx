@@ -110,6 +110,7 @@ function JobListComponent(props: Props & RouteComponentProps): JSX.Element {
                 <div>
                     <Button
                         type='link'
+                        style={{color: "#1446c0"}}
                         onClick={(e: React.MouseEvent): void => {
                             e.preventDefault();
                             push(`/tasks/${taskId}/jobs/${id}`);

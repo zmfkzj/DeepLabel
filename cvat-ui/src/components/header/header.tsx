@@ -28,7 +28,7 @@ import Text from 'antd/lib/typography/Text';
 import getCore from 'cvat-core-wrapper';
 import consts from 'consts';
 
-import { CVATLogo, AccountIcon } from 'icons';
+import CVATLogo from '../../assets/deeplabel-logo_3.svg';
 import ChangePasswordDialog from 'components/change-password-modal/change-password-modal';
 import { switchSettingsDialog as switchSettingsDialogAction } from 'actions/settings-actions';
 import { logoutAsync, authActions } from 'actions/auth-actions';
@@ -248,7 +248,7 @@ function HeaderContainer(props: Props): JSX.Element {
     return (
         <Layout.Header className='cvat-header'>
             <div className='cvat-left-header'>
-                <Icon className='cvat-logo-icon' component={CVATLogo} />
+                <CVATLogo width={150} height={50} fill={"#ffffff"} />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <Button
                     className='cvat-header-button'
                     type='link'
@@ -274,7 +274,7 @@ function HeaderContainer(props: Props): JSX.Element {
                     Tasks
                 </Button>
 
-                {isModelsPluginActive && (
+                {false && isModelsPluginActive && (
                     <Button
                         className='cvat-header-button'
                         type='link'
@@ -305,39 +305,42 @@ function HeaderContainer(props: Props): JSX.Element {
                 )}
             </div>
             <div className='cvat-right-header'>
-                <Button
-                    className='cvat-header-button'
-                    type='link'
-                    href={GITHUB_URL}
-                    onClick={(event: React.MouseEvent): void => {
-                        event.preventDefault();
-                        window.open(GITHUB_URL, '_blank');
-                    }}
-                >
-                    <GithubOutlined />
-                    <Text className='cvat-text-color'>GitHub</Text>
-                </Button>
-                <Button
-                    className='cvat-header-button'
-                    type='link'
-                    href={`${tool.server.host}/documentation/user_guide.html`}
-                    onClick={(event: React.MouseEvent): void => {
-                        event.preventDefault();
-                        // false positive
-                        // eslint-disable-next-line
-                        window.open(`${tool.server.host}/documentation/user_guide.html`, '_blank');
-                    }}
-                >
-                    <QuestionCircleOutlined />
-                    Help
-                </Button>
+                {false && (
+                    <Button
+                        className='cvat-header-button'
+                        type='link'
+                        href={GITHUB_URL}
+                        onClick={(event: React.MouseEvent): void => {
+                            event.preventDefault();
+                            window.open(GITHUB_URL, '_blank');
+                        }}
+                    >
+                        <GithubOutlined />
+                        <Text className='cvat-text-color'>GitHub</Text>
+                    </Button>
+                )}
+                {false && (
+                    <Button
+                        className='cvat-header-button'
+                        type='link'
+                        href={`${tool.server.host}/documentation/user_guide.html`}
+                        onClick={(event: React.MouseEvent): void => {
+                            event.preventDefault();
+                            // false positive
+                            // eslint-disable-next-line
+                            window.open(`${tool.server.host}/documentation/user_guide.html`, '_blank');
+                        }}
+                    >
+                        <QuestionCircleOutlined />
+                        Help
+                    </Button>
+                )}
                 <Dropdown overlay={menu} className='cvat-header-menu-dropdown'>
                     <span>
-                        <Icon className='cvat-header-account-icon' component={AccountIcon} />
-                        <Text strong>
+                        <Text strong style={{color: "#ffffff"}}>
                             {user.username.length > 14 ? `${user.username.slice(0, 10)} ...` : user.username}
                         </Text>
-                        <CaretDownOutlined className='cvat-header-menu-icon' />
+                        <CaretDownOutlined className='cvat-header-menu-icon' style={{color: "#ffffff"}} />
                     </span>
                 </Dropdown>
             </div>
